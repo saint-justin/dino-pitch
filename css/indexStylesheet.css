@@ -1,0 +1,287 @@
+/* Index Stylesheet Version 2.0 */
+
+/* ##### Main Structure ##### */
+*{
+    margin: 0;
+    padding: 0;
+    /*
+    border-style: solid;
+    border-width: 0px;
+    background-color: #E2FFDD;
+    */
+}
+
+#main{
+    background-image: url("../media/bg.png");
+    background-size: cover;
+}
+
+.pseudo_page_top{
+    margin: 0% 15%;
+    /* padding: 0em 3em 4em 3em; */
+    /* height: 0em;*/
+    border-width: 0em 1em;
+    border-color: #252F18;
+    background-color:#252F18;
+    margin-bottom: 2em;
+}
+.pseudo_page{
+    margin: 0% 15%;
+    padding: 2em 3em 4em 3em;
+    border-width: 1em 1em 0 1em;
+    border-color: #252F18;
+    background-color:#F4FFF2;
+    display: block;
+}
+
+
+/* ###### Generalized Rules ##### */
+
+h1, h2, h3, h4, a{
+    font-family: 'Niconne', cursive;
+    background-color: #F4FFF2;
+}
+
+h2{
+    color: #3A6318;
+    background-color: #F4FFF2;
+    font-size: 180%;
+    margin-bottom: 0.25em;
+}
+
+h3{
+    color: #3A6318;
+    background-color: #F4FFF2;
+    font-size: 140%;
+    margin-bottom: 0.25em;
+}
+
+p{
+    font-size: 100%;
+    text-indent: 5%;
+    background-color: #F4FFF2;
+    text-align: justify;
+    font-family: "Roboto",sans-serif;
+}
+
+em{
+    background-color: #F4FFF2;
+}
+.article_sbs p{
+    text-indent: 0;
+}
+
+caption{
+    background-color: #F4FFF2;
+}
+
+/* Links */
+a{
+    margin: 0;
+    padding: 0;
+}
+
+a:active, a:hover, a:visited, a:link{
+    color: #3A6318;
+    text-decoration: none;
+}
+
+a .inline{
+    color: #7EC098;
+}
+/* ##### Navigation ##### */
+#return_to_top{
+    height: 2em;
+    width: 2em;
+    background-color: #252F18;
+    color: white;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 1;
+    text-align: center;
+}
+
+#nav_bar{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav_bar_list{
+    margin-bottom: 1em;
+    display: flex;
+    list-style-type: none;
+    flex-grow: 1;
+    margin: 0 0.5em 1em 0.5em;
+}
+
+#nav_bar li{
+    
+    margin: 0% 0.5%;
+    font-size: 140%;
+    flex-grow: 1;
+}   
+
+li a{
+    background-color: #D7F6D2;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0.5em 1em;
+    text-align:justify;
+    text-align-last:center;
+    justify-content: space-around;
+    transition: 0.4s;
+}
+
+li a:hover{
+    background-color: #FFF;
+    color: #3A6318;
+}
+
+#current_page{
+    background-color: #FFF;
+}
+
+#current_page:hover{
+    font-size: 90%;
+    color: #717171;
+}
+
+/* Header Image */
+#header_article{
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: #263018;
+    display: block;
+    margin-bottom: 2em;
+}
+
+#header_article img{
+    width: 100%;
+    display: block;
+}
+
+
+/* ##### Lower Articles ##### */
+
+.span{
+    clear: both;
+}
+
+/* Large Articles */
+.article_large{
+    margin-bottom: 2em;
+    clear: left;
+    width: 87.5%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.article_large_text{ 
+    background-color: #F4FFF2;
+    text-align: center;
+}
+
+.specialspacing{
+    text-indent: 0;
+}
+
+.article_large_text #tagline{
+    text-align: center;
+    font-size: 1.5em;
+    width: 50%;
+    margin: auto;
+    color: #414141;
+    text-indent: 0;
+}
+
+/* Side by Side Articles */
+.block_center{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.article_sbs{
+    display: inline-flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.sbs_element{
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    padding: 1em;
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+.sbs_element h3{
+    display: block;
+}
+
+.sbs_element p{
+    display: block;
+}
+
+/* Wide Articles */
+.wide_image{
+    display: inline-block;
+    height: auto;
+    background-color: #F4FFF2;
+    clear: both;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.wide_image img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #ABDC83;
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: #263018;
+}
+
+.wide_image p{
+        margin-top: 0.5em;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 800px){
+    .pseudo_page{
+        padding: 1em
+    }
+    
+    #nav_bar_list{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    
+    .article_sbs{
+        display: inline-flex;
+        flex-direction: column
+    }
+    .sbs_element{
+        width: 100%;
+        padding: 0;
+    }
+    .article_large_text #tagline{
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    margin: auto;
+    color: #414141;
+    text-indent: 0;
+    }
+}
